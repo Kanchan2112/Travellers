@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detail Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    #heading-title{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 60px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .detail-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .detail-header img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .detail-header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .detail-body {
+      margin-top: 30px;
+    }
+
+    .detail-body h3 {
+      margin-bottom: 10px;
+      color: #007BFF;
+    }
+
+    .detail-body p {
+      line-height: 1.6;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="detail-header">
+          <img src="booking sucessful.jpg" alt="Item Image">
+          
+          <div>
+            <h1 id="heading-title">Booking sucessful</h1>
+            <h3>Name: <span id="name"></span></h3>
+            <h3>Email: <span id="email"></span></h3>
+            <h3>phone: <span id="phone"></span></h3>
+            <h3>Address: <span id="address"></span></h3>
+            <h3>Location: <span id="location"></span></h3>
+            <h3>Guests: <span id="guests"></span></h3>
+            <h3>Arrivals: <span id="arrivals"></span></h3>
+            <h3>Leaving: <span id="leaving"></span></h3>
+            
+          </div>
+        </div>
+    
+    
+        <a href="/project.html" class="back-link">&larr; Back to Home</a>
+      </div>
+
+      
+
+
+    <script>
+        let detail = localStorage.getItem('bookingData')
+        let booking = JSON.parse(detail);
+        // {"name":"reet","email":"mjb@gmail.com","phone":"786868","address":"8757i657","location":"oliyliut","guests":"68","arrivals":"97687-08-06","leaving":"5857-08-07"}
+        if(booking){
+            document.getElementById('name').innerHTML = booking.name;
+            document.getElementById('email').innerHTML = booking.email;
+            document.getElementById('phone').innerHTML = booking.phone;
+            document.getElementById('address').innerHTML = booking.address;
+            document.getElementById('location').innerHTML = booking.location;
+            document.getElementById('guests').innerHTML = booking.guests;
+            document.getElementById('arrivals').innerHTML = booking.arrivals;
+            document.getElementById('leaving').innerHTML = booking.leaving;
+        }
+    </script>
+
+
+</body>
+</html>

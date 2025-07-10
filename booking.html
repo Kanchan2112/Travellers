@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking page</title>
+    <link rel="stylesheet" href="booking.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="booking-heading">
+        <h1> BOOK NOW</h1>
+    </div>
+    <section class="booking">
+        <h2 class="heading-title">Book your trip!</h2>
+        <form action="" class="book-form">
+           
+            <div class="flex">
+            <div class="inputBox">
+                    <span>name</span>
+                    <input type="text" placeholder="enter your name" name="name">
+            </div>
+
+            <div class="inputBox">
+                    <span>email</span>
+                    <input type="email" placeholder="enter your email" name="email">
+            </div>
+               
+            <div class="inputBox">
+                <span>phone</span>
+                <input type="number" placeholder="enter your number" name="phone">
+            </div>
+
+            <div class="inputBox">
+                <span>address:</span>
+                <input type="text" placeholder="enter your address" name="address">
+            </div>
+
+            <div class="inputBox">
+                <span>Where to:</span>
+                <input type="text" placeholder="place you want to visit" name="location">
+            </div>
+
+            <div class="inputBox">
+                <span>How many:</span>
+                <input type="number" placeholder="number of  guests" name="guests" id="guests">
+            </div>
+
+            <div class="inputBox">
+                <span>arrivals:</span>
+                <input type="date" name="arrivals">
+            </div>
+
+            <div class="inputBox">
+                <span>leaving:</span>
+                <input type="date" name="leaving">
+            </div>
+        </div>
+
+        <input type="submit" value="proceed to payment"  class="btn" name="send"> 
+        
+        <!-- <div  class="proceed_next"> 
+            <a href=""></a>
+        </div> -->
+        </form>
+        
+    </section>
+
+    <footer id="contact">
+        <div class="section_container footer_container">
+          <div class="footer_col">
+              <div class="footer_logo">
+                  <a href="#" class="logo"> TicketJet</a>
+              </div>
+              <p>
+                  At TicketJet, we believe that every journey tells a story. Whether you're dreaming of sun-soaked beaches, snow-capped peaks, vibrant cities, or hidden countryside gems, we’re here to take you there—with comfort, ease, and unforgettable experiences.
+              </p>
+              <ul class="footer_socials">
+                  <li>
+                      <a href="https://www.facebook.com/groups/Miyar.Travel/"><i class="ri-facebook-fill"></i></a>
+                  </li>
+                  <li>
+                      <a href="https://www.instagram.com/travelanddestinations/?hl=en"><i class="ri-instagram-line"></i></a>
+                  </li>
+                  <li>
+                      <a href="https://youtu.be/BaXRKUk7uyk?feature=shared"><i class="ri-youtube-line"></i></a>
+                  </li>
+              </ul>
+          </div>
+          <div class="footer_col">
+              <h4>
+                  Quick Links
+              </h4>
+              <ul class="footer_links">
+                  <li><a href="/project.html">Home</a></li>
+                  <li><a href="/package.html">Packages</a></li>
+                  <li><a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwikhLer29GMAxVHxUwCHXqGHskYABAAGgJ0bQ&co=1&gclid=CjwKCAjw--K_BhB5EiwAuwYoyr2DqYImFBTlyBZTQdjOP8TLSfUCKklFOkcILV2oOf0ge2T7cxOwCBoCr_cQAvD_BwE&ohost=www.google.com&cid=CAESeuD2mgpg1obYlM95YQqHFmQN2euuO_iFveb_RrHYYoRfigxzF7JQPyNnXQSi8HPOPwCJaJpPfH-Oo0eVEpYbqqJdrUqT9wr83dSqsLRFhpCc-9nQsjl7ekNiDBHRFGyNNpvVcmIJl9b7xeZ63745sQMoA636SmU0vxW7&sig=AOD64_27qboPfB_R_e7_wIXvyowJXoIHLg&q&adurl&ved=2ahUKEwipj7Kr29GMAxUvhq8BHfQkO2sQ0Qx6BAgOEAQ">Hotels</a></li>
+                  <li><a href="https://www.thomascook.in/holidays/cruise-tour-packages">Cruise</a></li>
+              </ul>
+          </div>
+          <div class="footer_col">
+              <h4>Contact Us</h4>
+              <ul class="footer_links">
+                  <li><a href="#">
+                      <span><i class="ri-phone-fill"></i></span> +91 9876543210
+                  </a>
+              </li>
+
+              <li><a href="#">
+                  <span><i class="ri-record-mail-line"></i></span> info@TicketJet.com
+              </a>
+              </li>
+
+             <li><a href="#">
+              <span><i class="ri-map-pin-2-fill"></i></span> New Delhi,India
+             </a>
+             </li>
+              </ul>
+          </div>
+          <div class="footer_col">
+              <h4>Subscribe</h4>   
+              <form action="/">
+                  <input type="text" placeholder="Enter your email">
+                  <button  class="btn">submit</button>
+              </form>
+          </div>
+        </div>
+         <div class="footer_bar">
+            copyright 2025 Web Design Mastery. All rights reserved.
+         </div>
+
+
+      </footer>
+   <script>
+    
+
+document.querySelector(".book-form").addEventListener("submit", function (e) {
+
+e.preventDefault();
+
+const formData = new FormData(this);
+const data = {};
+let hasError = false;
+let errorMessage = '';
+
+// Custom required validation
+for (let [key, value] of formData.entries()) {
+    if (!value.trim()) {
+        hasError = true;
+        errorMessage = `⚠️ Please fill out the "${key}" field.`;
+        break;
+    }
+    data[key] = value;
+}
+
+if (hasError) {
+    alert(errorMessage);
+    return;
+}
+
+// Store into localStorage
+localStorage.setItem("bookingData", JSON.stringify(data));
+
+// Show success message
+window.location.href = './payment-voucher.html';
+
+// Reset form
+this.reset();
+});
+
+   </script>
+</body>
+</html>

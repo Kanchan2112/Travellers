@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.about-us {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 90px 0;
+  background: #fff;
+}
+.pic {
+    padding-top: 60px;
+  height:30rem;
+  width: 30rem;
+  border-radius: 12px;
+}
+.about {
+  width: 1130px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.text {
+  width: 540px;
+}
+.text h2 {
+  color: #333;
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.text h5 {
+  color: #333;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+span {
+  color: #4070f4;
+}
+.text p {
+  color: #333;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.first-heading{
+     padding-top: 80px;
+    text-align: center;
+}
+.second-heading{
+    padding-left: 45px;
+}
+.data {
+  margin-top: 30px;
+}
+.hire {
+  font-size: 18px;
+  background: #4070f4;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.hire:hover {
+  background: #000;
+}
+
+  .branches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .branch-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+
+  .branch-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .branch-card h3 {
+    color: #007bff;
+    margin-bottom: 0.5rem;
+  }
+
+  .services {
+    max-width: 800px;
+    padding-right: 50%;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .services ul {
+    list-style: none;
+    padding-left: 1rem;
+  }
+
+  .services ul li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.2rem;
+  }
+
+  .services ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: green;
+  }

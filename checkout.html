@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart - Trip to Agra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .cart-container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 0 0 25px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .trip-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .trip-details {
+      padding: 20px 25px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .trip-title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .trip-info {
+      margin: 15px 0;
+    }
+
+    .trip-info p {
+      margin: 6px 0;
+      color: #555;
+    }
+
+    .trip-info span {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .cart-header {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .cart-header h2 {
+      margin: 0;
+      color: #444;
+    }
+
+    .price-details {
+      border-top: 1px solid #ddd;
+      margin: 20px 25px 0 25px;
+      padding-top: 20px;
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 16px;
+    }
+
+    .total {
+      font-weight: bold;
+      font-size: 18px;
+      border-top: 1px solid #ddd;
+      margin-top: 10px;
+      padding-top: 10px;
+    }
+
+    .checkout-btn {
+      margin: 25px;
+      width: calc(100% - 50px);
+      padding: 15px;
+      background-color: #28a745;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .checkout-btn:hover {
+      background-color: #218838;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin: 6px 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="cart-container">
+
+    <!-- Trip Image -->
+    <img src="innerimage.jpg" alt="Taj Mahal" class="trip-image" />
+    <!-- You can replace the URL above with your image path, like: images/tajmahal.png -->
+
+    <!-- Trip Details -->
+    <div class="trip-details">
+      <div class="trip-title">Trip to Mathura, Vrindavan & Agra (3N/4D)</div>
+      <div class="trip-info">
+        <p><span>Includes:</span></p>
+        <ul>
+          <li>Intercity Car Transfers</li>
+          <li>Airport Pickup & Drop</li>
+          <li>3 Activities</li>
+          <li>Selected Meals</li>
+          <li>3-star Hotels</li>
+        </ul>
+        <p><span>Highlights:</span></p>
+        <ul>
+          <li>Dwarkadish Temple, Krishna Janmasthan Temple, Janma Bhoomi Mandir</li>
+          <li>Vishram Ghat, Iskcon Vrindavan, Mathura Banke Bihari Temple</li>
+          <li>Rangji Mandir, Sri Sri Radha Madan Mohan, Prem Mandir</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Cart Summary -->
+    <div class="cart-header">
+      <h2>Cart Summary</h2>
+    </div>
+
+    <div class="price-details">
+      <div class="price-item">
+        <span>Base Price (per person)</span>
+        <span>₹62,171</span>
+      </div>
+      <div class="price-item">
+        <span>GST (18%)</span>
+        <span>₹11,190.78</span>
+      </div>
+      <div class="price-item">
+        <span>Service Charge</span>
+        <span>₹500</span>
+      </div>
+      <div class="price-item total">
+        <span>Total Amount</span>
+        <span>₹73,861.78</span>
+      </div>
+    </div>
+
+    <button class="checkout-btn">Proceed to Checkout</button>
+  </div>
+  <script>
+        
+  </script>
+</body>
+</html>
